@@ -16,7 +16,7 @@ public abstract class Duck {
         this.quackBehavior = quackBehavior;
     }
 
-    public abstract void display();
+    public abstract String display();
 
     public void performFly() {
         flyBehavior.fly();
