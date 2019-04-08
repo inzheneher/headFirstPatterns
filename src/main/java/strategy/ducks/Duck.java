@@ -9,21 +9,23 @@ public abstract class Duck {
     QuackBehavior quackBehavior;
 
     public void setFlyBehavior(FlyBehavior flyBehavior) {
+        if (flyBehavior == null) throw new IllegalArgumentException();
         this.flyBehavior = flyBehavior;
     }
 
     public void setQuackBehavior(QuackBehavior quackBehavior) {
+        if (quackBehavior == null) throw new IllegalArgumentException();
         this.quackBehavior = quackBehavior;
     }
 
     public abstract String display();
 
-    public void performFly() {
-        flyBehavior.fly();
+    public String performFly() {
+        return flyBehavior.fly();
     }
 
-    public void performQuack() {
-        quackBehavior.quack();
+    public String performQuack() {
+        return quackBehavior.quack();
     }
 
     public void swim() {
