@@ -1,8 +1,9 @@
+package strategy;
+
 import org.junit.Before;
 import org.junit.Test;
 import strategy.ducks.Duck;
-import strategy.ducks.MallardDuck;
-import strategy.ducks.RubberDuck;
+import strategy.ducks.RedheadDuck;
 import strategy.fly.FlyNoWay;
 import strategy.fly.FlyRocketPowered;
 import strategy.fly.FlyWithWings;
@@ -12,20 +13,20 @@ import strategy.quack.Squeak;
 
 import static org.fest.assertions.api.Assertions.assertThat;
 
-public class RubberDuckTest {
+public class RedheadDuckTest {
 
     private Duck duck;
 
     @Before
     public void setUp() {
-        duck = new RubberDuck();
+        duck = new RedheadDuck();
         duck.setFlyBehavior(new FlyWithWings());
         duck.setQuackBehavior(new Quack());
     }
 
     @Test
     public void shouldPrintDisplayMessageWhenCallDisplayMethod() {
-        assertThat(duck.display()).isEqualTo("I'm real Rubber duck");
+        assertThat(duck.display()).isEqualTo("I'm real Redhead duck");
     }
 
     @Test
