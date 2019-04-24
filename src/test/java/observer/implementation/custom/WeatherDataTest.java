@@ -1,7 +1,5 @@
-package observer;
+package observer.implementation.custom;
 
-import observer.implementation.custom.CurrentConditionsDisplay;
-import observer.implementation.custom.WeatherData;
 import org.junit.Before;
 import org.junit.Test;
 

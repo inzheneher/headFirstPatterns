@@ -13,8 +13,16 @@ repositories {
 
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    implementation(
+            "org.springframework",
+            "spring-context",
+            "5.1.6.RELEASE")
     testImplementation("junit", "junit", "4.12")
     testImplementation("org.easytesting:fest-assert-core:2.0M10")
+    testImplementation(
+            "org.springframework",
+            "spring-test",
+            "5.1.6.RELEASE")
 }
 
 configure<JavaPluginConvention> {
